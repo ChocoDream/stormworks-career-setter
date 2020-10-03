@@ -8,4 +8,3 @@ I don't think that's a fair treatment to give your users who have paid for a pro
 This website will allow you to generate a settings XML you can import to your game to play with these settings.
 
 Not sponsored by Stormworks and will remove repo if the developers of Stormworks wishes so.
-# stormworks career setter
