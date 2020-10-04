@@ -6,21 +6,44 @@
         v-for="(value, name, i) in settings"
         :key="`${value}` + i"
         :name="name"
-        :value="value"
+        :bool="value"
         class="checkbox"
         @childToParent="onChildClick"
       />
     </div>
+    <div>
+      <InputField
+        v-for="(value, name, i) in currency"
+        :key="`${value}` + i"
+        :name="name"
+        :value="value"
+        @childToParent="onChildInput"
+      />
+    </div>
+    <button
+      @click="
+        saveFileToClient('test.txt', 'text/plain')
+      "
+    >
+      Save file
+    </button>
+    <button @click="onClick">
+      Click me for test
+    </button>
+    <p>{{ currency }}</p>
   </div>
 </template>
 
 <script>
 import Checkbox from "./Checkbox.vue";
+import InputField from "./InputField.vue";
+import {convertToLuaTxt} from '../FileConverter'
 import Vue from "vue";
 export default {
   name: "Page",
   components: {
     Checkbox,
+    InputField,
   },
   data() {
     return {
@@ -63,17 +86,40 @@ export default {
   },
   methods: {
     onChildClick(value) {
-      this.updateField(value);
+      this.updateSettings(value);
     },
-    updateField({ field, bool }) {
+    onChildInput(value) {
+      this.updateCurrency(value);
+    },
+    updateSettings({ field, bool }) {
       Vue.set(this.settings, field, bool);
+    },
+    updateCurrency({ field, value }) {
+      Vue.set(this.currency, field, value);
+    },
+    onClick(){
+      const test = convertToLuaTxt(this.settings);
+      console.log(test)
+    },
+    saveFileToClient(filename, contentType) {
+      let content = convertToLuaTxt(this.settings)
+      //WORK ON THIS
+      console.log("saving...");
+      const a = document.createElement("a");
+      const file = new Blob([content], { type: contentType });
+
+      a.href = URL.createObjectURL(file);
+      a.download = filename;
+      a.click();
+
+      URL.revokeObjectURL(a.href);
     },
   },
 };
 </script>
 
 <style scoped>
-.checkbox{
-  display:flex;
+.checkbox {
+  display: flex;
 }
 </style>

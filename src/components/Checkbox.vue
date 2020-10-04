@@ -1,24 +1,22 @@
 <template>
-  <div>
-    <md-checkbox v-model="checkboxValue" @change="sendToParent">
-      <h2>{{ name }}</h2>
-    </md-checkbox>
-  </div>
+  <md-checkbox v-model="checkboxBool" @change="sendToParent">
+    <h2>{{ name }}</h2>
+  </md-checkbox>
 </template>
 
 <script>
 export default {
-  props: ["name", "value"],
+  props: ["name", "bool"],
   data() {
     return {
-      checkboxValue: this.value,
+      checkboxBool: this.bool,
     };
   },
   methods: {
     sendToParent() {
       this.$emit("childToParent", {
         field: this.name,
-        bool: this.checkboxValue,
+        bool: this.checkboxBool,
       });
     },
   },
@@ -26,5 +24,4 @@ export default {
 </script>
 
 <style>
-
 </style>
