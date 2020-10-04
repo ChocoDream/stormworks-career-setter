@@ -7,7 +7,6 @@
         :key="`${value}` + i"
         :name="name"
         :bool="value"
-        class="checkbox"
         @childToParent="onChildClick"
       />
     </div>
@@ -20,30 +19,26 @@
         @childToParent="onChildInput"
       />
     </div>
-    <button
-      @click="
-        saveFileToClient('test.txt', 'text/plain')
-      "
-    >
+    <Modal title="Show Settings" />
+    <button @click="saveFileToClient('settings.txt', 'text/plain')">
       Save file
     </button>
-    <button @click="onClick">
-      Click me for test
-    </button>
-    <p>{{ currency }}</p>
   </div>
 </template>
 
 <script>
 import Checkbox from "./Checkbox.vue";
 import InputField from "./InputField.vue";
-import {convertToLuaTxt} from '../FileConverter'
+import Modal from './Modal.vue'
+
 import Vue from "vue";
+import { convertToLuaTxt } from "../FileConverter";
 export default {
   name: "Page",
   components: {
     Checkbox,
     InputField,
+    Modal
   },
   data() {
     return {
@@ -97,12 +92,8 @@ export default {
     updateCurrency({ field, value }) {
       Vue.set(this.currency, field, value);
     },
-    onClick(){
-      const test = convertToLuaTxt(this.settings);
-      console.log(test)
-    },
     saveFileToClient(filename, contentType) {
-      let content = convertToLuaTxt(this.settings)
+      let content = convertToLuaTxt(this.settings, this.currency);
       //WORK ON THIS
       console.log("saving...");
       const a = document.createElement("a");
@@ -119,7 +110,4 @@ export default {
 </script>
 
 <style scoped>
-.checkbox {
-  display: flex;
-}
 </style>
