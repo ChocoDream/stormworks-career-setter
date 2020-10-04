@@ -11,6 +11,6 @@ cd dist
 git init
 git add -abortgit commit -m 'deploy'
 
-# git push -f https://github.com/ChocoDream/stormworks-career-setter.git master:gh-pages
+git push -f https://github.com/ChocoDream/stormworks-career-setter.git master:gh-pages
 
 cd -
