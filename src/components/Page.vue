@@ -43,6 +43,8 @@ import InputField from "./InputField.vue";
 import Modal from "./Modal.vue";
 import vSelect from "vue-select";
 import Vue from "vue";
+import PRESETS_DATA from "../assets/presets_data.json";
+
 export default {
   name: "Page",
   components: {
@@ -89,136 +91,14 @@ export default {
         cash: 25000,
         research: 20,
       },
-      presets: [
-        {
-          label: "classic career",
-          value: "classic-career",
-          settings: {
-            conditions: {
-              third_person: false,
-              third_person_vehicle: false,
-              vehicle_damage: false,
-              player_damage: false,
-              npc_damage: false,
-              sharks: true,
-              fast_travel: true,
-              teleport_vehicle: true,
-              rogue_mode: true,
-              auto_refuel: true,
-              megalodon: true,
-              map_show_players: true,
-              map_show_vehicles: true,
-              show_3d_waypoints: true,
-              show_name_plates: true,
-              infinite_money: true,
-              unlock_all_islands: true,
-              unlock_all_components: true,
-              infinite_batteries: true,
-              infinite_fuel: true,
-              engine_overheating: true,
-              no_clip: true,
-              map_teleport: true,
-              cleanup_vehicle: true,
-              clear_fow: true,
-              vehicle_spawning: true,
-              photo_mode: true,
-              respawning: true,
-              settings_menu_lock: true,
-              despawn_on_leave: true,
-            },
-            currency: {
-              cash: 25000,
-              research: 20,
-            },
-          },
-        },
-        {
-          label: "1.0 career",
-          value: "1.0-career",
-          settings: {
-            conditions: {
-              third_person: true,
-              third_person_vehicle: true,
-              vehicle_damage: true,
-              player_damage: true,
-              npc_damage: false,
-              sharks: true,
-              fast_travel: true,
-              teleport_vehicle: true,
-              rogue_mode: true,
-              auto_refuel: true,
-              megalodon: true,
-              map_show_players: true,
-              map_show_vehicles: true,
-              show_3d_waypoints: true,
-              show_name_plates: true,
-              infinite_money: true,
-              unlock_all_islands: true,
-              unlock_all_components: true,
-              infinite_batteries: true,
-              infinite_fuel: true,
-              engine_overheating: true,
-              no_clip: true,
-              map_teleport: true,
-              cleanup_vehicle: true,
-              clear_fow: true,
-              vehicle_spawning: true,
-              photo_mode: true,
-              respawning: true,
-              settings_menu_lock: true,
-              despawn_on_leave: true,
-            },
-            currency: {
-              cash: 25000,
-              research: 20,
-            },
-          },
-        },
-        {
-          label: "rogue",
-          value: "rogue",
-          settings: {
-            conditions: {
-              third_person: true,
-              third_person_vehicle: true,
-              vehicle_damage: true,
-              player_damage: true,
-              npc_damage: false,
-              sharks: true,
-              fast_travel: true,
-              teleport_vehicle: true,
-              rogue_mode: true,
-              auto_refuel: true,
-              megalodon: true,
-              map_show_players: true,
-              map_show_vehicles: true,
-              show_3d_waypoints: true,
-              show_name_plates: true,
-              infinite_money: true,
-              unlock_all_islands: true,
-              unlock_all_components: true,
-              infinite_batteries: true,
-              infinite_fuel: true,
-              engine_overheating: true,
-              no_clip: true,
-              map_teleport: true,
-              cleanup_vehicle: true,
-              clear_fow: true,
-              vehicle_spawning: true,
-              photo_mode: true,
-              respawning: true,
-              settings_menu_lock: true,
-              despawn_on_leave: true,
-            },
-            currency: {
-              cash: 25000,
-              research: 20,
-            },
-          },
-        },
-      ],
+      data: PRESETS_DATA,
       selectedPreset: "",
     };
+  },
+  computed: {
+    presets() {
+      return this.data;
+    },
   },
   methods: {
     onChildClick(value) {
@@ -246,11 +126,6 @@ export default {
       }
     },
   },
-  /*   computed: {
-    settingsexcludelock(){
-      return 
-    }
-  } */
 };
 </script>
 
