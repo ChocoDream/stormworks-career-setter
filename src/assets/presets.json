@@ -1,45 +1,46 @@
 [
   {
-    "label": "classic career",
+    "label": "Classic Career (pre 1.0.0)",
     "value": "classic-career",
     "settings": {
       "conditions": {
         "third_person": false,
         "third_person_vehicle": false,
-        "vehicle_damage": false,
-        "player_damage": false,
-        "npc_damage": false,
+        "vehicle_damage": true,
+        "player_damage": true,
+        "npc_damage": true,
         "sharks": true,
         "fast_travel": true,
         "teleport_vehicle": true,
-        "rogue_mode": true,
+        "rogue_mode": false,
         "auto_refuel": true,
-        "megalodon": true,
+        "megalodon": false,
         "map_show_players": true,
         "map_show_vehicles": true,
         "show_3d_waypoints": true,
         "show_name_plates": true,
-        "infinite_money": true,
-        "unlock_all_islands": true,
-        "unlock_all_components": true,
-        "infinite_batteries": true,
-        "infinite_fuel": true,
+        "unlock_all_islands": false,
+        "unlock_all_components": false,
+        "infinite_batteries": false,
+        "infinite_money": false,
+        "infinite_fuel": false,
         "engine_overheating": true,
-        "no_clip": true,
-        "map_teleport": true,
-        "cleanup_vehicle": true,
-        "clear_fow": true,
+        "no_clip": false,
+        "map_teleport": false,
+        "cleanup_vehicle": false,
+        "clear_fow": false,
         "vehicle_spawning": true,
         "photo_mode": true,
         "respawning": true,
         "despawn_on_leave": true,
-        "settings_menu_lock": true
+        "settings_menu_lock": true,
+        "settings_menu": true
       },
       "currency": { "cash": 25000, "research": 20 }
     }
   },
   {
-    "label": "1.0 career",
+    "label": "Career",
     "value": "1.0-career",
     "settings": {
       "conditions": {
@@ -58,10 +59,10 @@
         "map_show_vehicles": true,
         "show_3d_waypoints": true,
         "show_name_plates": true,
-        "infinite_money": true,
         "unlock_all_islands": true,
         "unlock_all_components": true,
         "infinite_batteries": true,
+        "infinite_money": true,
         "infinite_fuel": true,
         "engine_overheating": true,
         "no_clip": true,
@@ -72,13 +73,14 @@
         "photo_mode": true,
         "respawning": true,
         "despawn_on_leave": true,
-        "settings_menu_lock": true
+        "settings_menu_lock": true,
+        "settings_menu": false
       },
       "currency": { "cash": 25000, "research": 20 }
     }
   },
   {
-    "label": "rogue",
+    "label": "Rogue",
     "value": "rogue",
     "settings": {
       "conditions": {
@@ -97,10 +99,10 @@
         "map_show_vehicles": true,
         "show_3d_waypoints": true,
         "show_name_plates": true,
-        "infinite_money": true,
         "unlock_all_islands": true,
         "unlock_all_components": true,
         "infinite_batteries": true,
+        "infinite_money": true,
         "infinite_fuel": true,
         "engine_overheating": true,
         "no_clip": true,
@@ -111,7 +113,8 @@
         "photo_mode": true,
         "respawning": true,
         "despawn_on_leave": true,
-        "settings_menu_lock": true
+        "settings_menu_lock": true,
+        "settings_menu": false
       },
       "currency": { "cash": 25000, "research": 20 }
     }

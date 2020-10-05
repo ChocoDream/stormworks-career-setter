@@ -15,21 +15,22 @@
     "map_show_vehicles": true,
     "show_3d_waypoints": true,
     "show_name_plates": true,
-    "infinite_money": true,
     "unlock_all_islands": false,
     "unlock_all_components": true,
     "infinite_batteries": false,
+    "infinite_money": true,
     "infinite_fuel": false,
     "engine_overheating": true,
     "no_clip": true,
     "map_teleport": true,
-    "cleanup_vehicle": true,
+    "cleanup_vehicle": false,
     "clear_fow": true,
     "vehicle_spawning": true,
     "photo_mode": true,
     "respawning": true,
     "despawn_on_leave": true,
-    "settings_menu_lock": false
+    "settings_menu_lock": false,
+    "settings_menu": false
   },
   "currency": { "cash": 25000, "research": 20 }
 }

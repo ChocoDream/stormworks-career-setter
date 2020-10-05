@@ -1,6 +1,6 @@
 <template>
   <div class="md-layout">
-    <h2>Stormworks Career Settings customizer</h2>
+    <h2>Stormworks Settings Lua Generator</h2>
     <form>
       <vue-select
         class="selector"
@@ -12,9 +12,9 @@
         @input="updateSettingsFromPreset"
       />
       <md-list class="md-layout">
-        <div class="checkbox-wrapper">
+        <div class="md-layout">
           <md-list-item
-            class="checkbox-item"
+            class="md-size-25"
             v-for="(value, name, i) in conditions"
             :key="`${value}` + i"
           >
