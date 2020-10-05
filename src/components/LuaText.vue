@@ -10,8 +10,8 @@
       </span><br />
       <span class="bool">if</span> (is_start) <span class="bool">then</span> <br />
       server.<span class="function">setCurrency</span>(<span class="number">{{currency.cash}}</span>, 
-        <span class="number">{{currency.research}}</span>)
-        <br />
+        <span class="number">{{currency.research}}</span>)<br />
+        <span class="bool">end</span><br />
       <span class="bool">end</span><br />
       <br />
     </p>
