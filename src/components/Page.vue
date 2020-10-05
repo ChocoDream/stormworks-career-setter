@@ -43,7 +43,9 @@ import InputField from "./InputField.vue";
 import Modal from "./Modal.vue";
 import vSelect from "vue-select";
 import Vue from "vue";
-import PRESETS_DATA from "../assets/presets_data.json";
+import PRESETS_DATA from "../assets/presets.json";
+import CURRENCY_DATA from "../assets/currency.json";
+import CONDITIONS_DATA from "../assets/conditions.json";
 
 export default {
   name: "Page",
@@ -55,49 +57,21 @@ export default {
   },
   data() {
     return {
-      conditions: {
-        third_person: true,
-        third_person_vehicle: true,
-        vehicle_damage: true,
-        player_damage: true,
-        npc_damage: false,
-        sharks: true,
-        fast_travel: true,
-        teleport_vehicle: true,
-        rogue_mode: true,
-        auto_refuel: true,
-        megalodon: true,
-        map_show_players: true,
-        map_show_vehicles: true,
-        show_3d_waypoints: true,
-        show_name_plates: true,
-        infinite_money: true,
-        unlock_all_islands: true,
-        unlock_all_components: true,
-        infinite_batteries: true,
-        infinite_fuel: true,
-        engine_overheating: true,
-        no_clip: true,
-        map_teleport: true,
-        cleanup_vehicle: true,
-        clear_fow: true,
-        vehicle_spawning: true,
-        photo_mode: true,
-        respawning: true,
-        settings_menu_lock: true,
-        despawn_on_leave: true,
-      },
-      currency: {
-        cash: 25000,
-        research: 20,
-      },
-      data: PRESETS_DATA,
+      conditionsJson: CONDITIONS_DATA,
+      currencyJson: CURRENCY_DATA,
+      presetsJson: PRESETS_DATA,
       selectedPreset: "",
     };
   },
   computed: {
+    conditions() {
+      return this.conditionsJson;
+    },
+    currency() {
+      return this.currencyJson;
+    },
     presets() {
-      return this.data;
+      return this.presetsJson;
     },
   },
   methods: {
