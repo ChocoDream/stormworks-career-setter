@@ -19,7 +19,7 @@ export default {
     sendToParent() {
       this.$emit("childToParent", {
         field: this.name,
-        bool: this.checkboxBool,
+        value: this.checkboxBool,
       });
     },
   },
