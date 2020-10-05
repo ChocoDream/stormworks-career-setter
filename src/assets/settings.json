@@ -2,9 +2,9 @@
   "conditions": {
     "third_person": true,
     "third_person_vehicle": true,
-    "vehicle_damage": false,
-    "player_damage": false,
-    "npc_damage": false,
+    "vehicle_damage": true,
+    "player_damage": true,
+    "npc_damage": true,
     "sharks": true,
     "fast_travel": true,
     "teleport_vehicle": true,
@@ -15,13 +15,13 @@
     "map_show_vehicles": true,
     "show_3d_waypoints": true,
     "show_name_plates": true,
-    "unlock_all_islands": false,
+    "unlock_all_islands": true,
     "unlock_all_components": true,
     "infinite_batteries": false,
     "infinite_money": true,
     "infinite_fuel": false,
     "engine_overheating": true,
-    "no_clip": true,
+    "no_clip": false,
     "map_teleport": true,
     "cleanup_vehicle": false,
     "clear_fow": true,
@@ -30,7 +30,7 @@
     "respawning": true,
     "despawn_on_leave": true,
     "settings_menu_lock": false,
-    "settings_menu": false
+    "settings_menu": true
   },
   "currency": { "cash": 25000, "research": 20 }
 }

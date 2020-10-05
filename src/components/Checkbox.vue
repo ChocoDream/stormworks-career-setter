@@ -1,6 +1,10 @@
 <template>
   <span>
-    <md-checkbox v-model="checkboxBool" @change="sendToParent" class="md-primary"> </md-checkbox>
+    <md-checkbox
+      v-model="checkboxBool"
+      @change="sendToParent"
+      class="md-primary">
+    </md-checkbox>
     <span>{{ formatName }}</span>
   </span>
 </template>

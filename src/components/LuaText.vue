@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <md-dialog-content class="lua-text">
     <p>
-      function <span class="function">onCreate</span>()<br />
+      function <span class="function">onCreate</span>(is_start)<br />
 
       <span v-for="(value, name, i) of settings" :key="`${value}` + i">
         server.<span class="function">setGameSetting</span>(<span class="string">"{{ name }}"</span>, 
@@ -15,7 +15,7 @@
       <span class="bool">end</span><br />
       <br />
     </p>
-  </div>
+  </md-dialog-content>
 </template>
 <script>
 export default {

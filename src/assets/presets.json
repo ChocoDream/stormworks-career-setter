@@ -13,7 +13,7 @@
         "fast_travel": true,
         "teleport_vehicle": true,
         "rogue_mode": false,
-        "auto_refuel": true,
+        "auto_refuel": false,
         "megalodon": false,
         "map_show_players": true,
         "map_show_vehicles": true,
@@ -34,9 +34,9 @@
         "respawning": true,
         "despawn_on_leave": true,
         "settings_menu_lock": true,
-        "settings_menu": true
+        "settings_menu": false
       },
-      "currency": { "cash": 25000, "research": 20 }
+      "currency": { "cash": 15000, "research": 5 }
     }
   },
   {
@@ -44,17 +44,57 @@
     "value": "1.0-career",
     "settings": {
       "conditions": {
+        "third_person": false,
+        "third_person_vehicle": false,
+        "vehicle_damage": true,
+        "player_damage": true,
+        "npc_damage": true,
+        "sharks": true,
+        "fast_travel": false,
+        "teleport_vehicle": false,
+        "rogue_mode": false,
+        "auto_refuel": true,
+        "megalodon": false,
+        "map_show_players": false,
+        "map_show_vehicles": false,
+        "show_3d_waypoints": false,
+        "show_name_plates": true,
+        "unlock_all_islands": false,
+        "unlock_all_components": true,
+        "infinite_batteries": false,
+        "infinite_money": false,
+        "infinite_fuel": false,
+        "engine_overheating": true,
+        "no_clip": false,
+        "map_teleport": false,
+        "cleanup_vehicle": false,
+        "clear_fow": true,
+        "vehicle_spawning": true,
+        "photo_mode": true,
+        "respawning": false,
+        "despawn_on_leave": true,
+        "settings_menu_lock": true,
+        "settings_menu": false
+      },
+      "currency": { "cash": 20000, "research": 5 }
+    }
+  },
+  {
+    "label": "Creative",
+    "value": "creative",
+    "settings": {
+      "conditions": {
         "third_person": true,
         "third_person_vehicle": true,
         "vehicle_damage": true,
-        "player_damage": true,
+        "player_damage": false,
         "npc_damage": false,
-        "sharks": true,
+        "sharks": false,
         "fast_travel": true,
         "teleport_vehicle": true,
-        "rogue_mode": true,
+        "rogue_mode": false,
         "auto_refuel": true,
-        "megalodon": true,
+        "megalodon": false,
         "map_show_players": true,
         "map_show_vehicles": true,
         "show_3d_waypoints": true,
@@ -73,8 +113,8 @@
         "photo_mode": true,
         "respawning": true,
         "despawn_on_leave": true,
-        "settings_menu_lock": true,
-        "settings_menu": false
+        "settings_menu_lock": false,
+        "settings_menu": true
       },
       "currency": { "cash": 25000, "research": 20 }
     }
@@ -84,39 +124,42 @@
     "value": "rogue",
     "settings": {
       "conditions": {
-        "third_person": true,
-        "third_person_vehicle": true,
+        "third_person": false,
+        "third_person_vehicle": false,
         "vehicle_damage": true,
         "player_damage": true,
-        "npc_damage": false,
+        "npc_damage": true,
         "sharks": true,
-        "fast_travel": true,
-        "teleport_vehicle": true,
+        "fast_travel": false,
+        "teleport_vehicle": false,
         "rogue_mode": true,
-        "auto_refuel": true,
+        "auto_refuel": false,
         "megalodon": true,
-        "map_show_players": true,
-        "map_show_vehicles": true,
-        "show_3d_waypoints": true,
+        "map_show_players": false,
+        "map_show_vehicles": false,
+        "show_3d_waypoints": false,
         "show_name_plates": true,
-        "unlock_all_islands": true,
-        "unlock_all_components": true,
-        "infinite_batteries": true,
-        "infinite_money": true,
-        "infinite_fuel": true,
+        "unlock_all_islands": false,
+        "unlock_all_components": false,
+        "infinite_batteries": false,
+        "infinite_money": false,
+        "infinite_fuel": false,
         "engine_overheating": true,
-        "no_clip": true,
-        "map_teleport": true,
-        "cleanup_vehicle": true,
-        "clear_fow": true,
+        "no_clip": false,
+        "map_teleport": false,
+        "cleanup_vehicle": false,
+        "clear_fow": false,
         "vehicle_spawning": true,
         "photo_mode": true,
-        "respawning": true,
+        "respawning": false,
         "despawn_on_leave": true,
         "settings_menu_lock": true,
         "settings_menu": false
       },
-      "currency": { "cash": 25000, "research": 20 }
+      "currency": {
+        "cash": 5000,
+        "research": 5
+      }
     }
   }
 ]

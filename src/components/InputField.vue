@@ -1,6 +1,8 @@
 <template>
   <md-field>
     <label> {{ name }} </label>
+    <span v-if="name === 'cash'" class="md-prefix">$</span>
+    <span v-if="name === 'research'" class="md-prefix">🧪</span>
     <md-input v-model="inputValue" @change="sendToParent"></md-input>
   </md-field>
 </template>

@@ -1,6 +1,6 @@
 <template>
   <div class="md-layout">
-    <h2>Stormworks Settings Lua Generator</h2>
+    <h1 class="md-display-1">Stormworks Settings Generator</h1>
     <form>
       <vue-select
         class="selector"
@@ -120,13 +120,18 @@ export default {
   display: flex;
   flex: 1 1 0px;
 }
-.selector, .v-select, .vs__dropdown-menu
-.selector, .v-select, .vs__dropdown-toggle {
+.selector,
+.v-select,
+.vs__dropdown-menu .selector,
+.v-select,
+.vs__dropdown-toggle {
   background: #217aff;
   border: none;
   color: #1332e6;
 }
-.selector, .v-select, .vs__selected{
+.selector,
+.v-select,
+.vs__selected {
   font-size: 1.4em;
   font-weight: bold !important;
 }
