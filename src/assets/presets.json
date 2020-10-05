@@ -32,8 +32,8 @@
         "vehicle_spawning": true,
         "photo_mode": true,
         "respawning": true,
-        "settings_menu_lock": true,
-        "despawn_on_leave": true
+        "despawn_on_leave": true,
+        "settings_menu_lock": true
       },
       "currency": { "cash": 25000, "research": 20 }
     }
@@ -71,8 +71,8 @@
         "vehicle_spawning": true,
         "photo_mode": true,
         "respawning": true,
-        "settings_menu_lock": true,
-        "despawn_on_leave": true
+        "despawn_on_leave": true,
+        "settings_menu_lock": true
       },
       "currency": { "cash": 25000, "research": 20 }
     }
@@ -110,8 +110,8 @@
         "vehicle_spawning": true,
         "photo_mode": true,
         "respawning": true,
-        "settings_menu_lock": true,
-        "despawn_on_leave": true
+        "despawn_on_leave": true,
+        "settings_menu_lock": true
       },
       "currency": { "cash": 25000, "research": 20 }
     }
