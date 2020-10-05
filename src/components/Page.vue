@@ -1,35 +1,44 @@
 <template>
-  <div>
+  <div class="md-layout">
     <h2>Stormworks Career Settings customizer</h2>
     <form>
-      <md-list>
-        <div>
-          <vue-select
-            v-model="selectedPreset"
-            :options="presets"
-            :reduce="(label) => label.value"
-            :clearable="false"
-            :placeholder="'Presets'"
-            @input="updateSettingsFromPreset"
-          />
-        </div>
-        <md-list-item
-          v-for="(value, name, i) in conditions"
-          :key="`${value}` + i">
-          <Checkbox :name="name" :bool="value" @childToParent="onChildClick" />
-        </md-list-item>
-        <div>
-          <InputField
-            v-for="(value, name, i) in currency"
+      <vue-select
+        class="selector"
+        v-model="selectedPreset"
+        :options="presets"
+        :reduce="(label) => label.value"
+        :clearable="false"
+        :placeholder="'Presets'"
+        @input="updateSettingsFromPreset"
+      />
+      <md-list class="md-layout">
+        <div class="checkbox-wrapper">
+          <md-list-item
+            class="checkbox-item"
+            v-for="(value, name, i) in conditions"
             :key="`${value}` + i"
-            :name="name"
-            :value="value"
-            @childToParent="onChildInput" />
+          >
+            <Checkbox
+              :name="name"
+              :bool="value"
+              @childToParent="onChildClick"
+            />
+          </md-list-item>
+          <md-list-item>
+            <InputField
+              v-for="(value, name, i) in currency"
+              :key="`${value}` + i"
+              :name="name"
+              :value="value"
+              @childToParent="onChildInput"
+            />
+          </md-list-item>
         </div>
-        <Modal
+        <LuaModal
           title="Generate Lua File"
           :settings="conditions"
-          :currency="currency" />
+          :currency="currency"
+        />
       </md-list>
     </form>
   </div>
@@ -38,7 +47,7 @@
 <script>
 import Checkbox from "./Checkbox.vue";
 import InputField from "./InputField.vue";
-import Modal from "./Modal.vue";
+import LuaModal from "./LuaModal.vue";
 import vSelect from "vue-select";
 import Vue from "vue";
 import PRESETS_DATA from "../assets/presets.json";
@@ -49,7 +58,7 @@ export default {
   components: {
     Checkbox,
     InputField,
-    Modal,
+    LuaModal,
     "vue-select": vSelect,
   },
   data() {
@@ -77,7 +86,7 @@ export default {
     },
     onChildInput(value) {
       this.updateCurrency(value);
-      this.selectedPreset = "Custom"
+      this.selectedPreset = "Custom";
     },
     updateSettings({ field, value }) {
       Vue.set(this.conditions, field, value);
@@ -101,4 +110,24 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.checkbox-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.checkbox-item {
+  display: flex;
+  flex: 1 1 0px;
+}
+.selector, .v-select, .vs__dropdown-menu
+.selector, .v-select, .vs__dropdown-toggle {
+  background: #217aff;
+  border: none;
+  color: #1332e6;
+}
+.selector, .v-select, .vs__selected{
+  font-size: 1.4em;
+  font-weight: bold !important;
+}
+</style>

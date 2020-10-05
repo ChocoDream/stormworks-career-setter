@@ -1,6 +1,6 @@
 <template>
   <span>
-    <md-checkbox v-model="checkboxBool" @change="sendToParent"> </md-checkbox>
+    <md-checkbox v-model="checkboxBool" @change="sendToParent" class="md-primary"> </md-checkbox>
     <span>{{ formatName }}</span>
   </span>
 </template>
@@ -37,4 +37,5 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+</style>

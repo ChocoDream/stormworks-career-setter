@@ -1,7 +1,7 @@
 <template>
   <div>
-    <md-dialog :md-active.sync="showDialog">
-      <md-dialog-title>Paste in to Lua Playlist</md-dialog-title>
+    <md-dialog :md-active.sync="showDialog" >
+      <md-dialog-title class="md-layout-item">Paste in to Lua Playlist</md-dialog-title>
       <md-dialog-content class="lua-text">
         <LuaText :settings="settings" :currency="currency"></LuaText>
       </md-dialog-content>
@@ -16,7 +16,7 @@
     </md-dialog>
 
     <md-button class="md-primary md-raised" @click="showDialog = true">
-      {{ title }}
+    {{ title }}
     </md-button>
   </div>
 </template>

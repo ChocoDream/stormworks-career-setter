@@ -4,14 +4,12 @@
       function <span class="function">onCreate</span>()<br />
 
       <span v-for="(value, name, i) of settings" :key="`${value}` + i">
-        server.<span class="function">setGameSetting</span> 
-          (<span class="string">"{{ name }}"</span>, 
+        server.<span class="function">setGameSetting</span>(<span class="string">"{{ name }}"</span>, 
           <span class="bool"> {{ value }}</span>)
           <br />
       </span><br />
       <span class="bool">if</span> (is_start) <span class="bool">then</span> <br />
-      server.<span class="function">setCurrency</span>
-        (<span class="number">{{currency.cash}}</span>, 
+      server.<span class="function">setCurrency</span>(<span class="number">{{currency.cash}}</span>, 
         <span class="number">{{currency.research}}</span>)
         <br />
       <span class="bool">end</span><br />
@@ -30,6 +28,7 @@ export default {
 <style scoped>
 p {
   color: white !important;
+  text-align: justify;
 }
 .function {
   color: var(--function);
