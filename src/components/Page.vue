@@ -19,26 +19,26 @@
         @childToParent="onChildInput"
       />
     </div>
-    <Modal title="Show Settings" />
-    <button @click="saveFileToClient('settings.txt', 'text/plain')">
-      Save file
-    </button>
+    <Modal
+      title="Generate Lua File"
+      :settings="settings"
+      :currency="currency"
+    />
   </div>
 </template>
 
 <script>
 import Checkbox from "./Checkbox.vue";
 import InputField from "./InputField.vue";
-import Modal from './Modal.vue'
+import Modal from "./Modal.vue";
 
 import Vue from "vue";
-import { convertToLuaTxt } from "../FileConverter";
 export default {
   name: "Page",
   components: {
     Checkbox,
     InputField,
-    Modal
+    Modal,
   },
   data() {
     return {
@@ -60,6 +60,7 @@ export default {
         show_name_plates: true,
         infinite_money: true,
         unlock_all_islands: true,
+        unlock_all_components: true,
         infinite_batteries: true,
         infinite_fuel: true,
         engine_overheating: true,
@@ -72,6 +73,7 @@ export default {
         respawning: true,
         settings_menu_lock: true,
         despawn_on_leave: true,
+        lock_settings: false,
       },
       currency: {
         cash: 25000,
@@ -92,20 +94,12 @@ export default {
     updateCurrency({ field, value }) {
       Vue.set(this.currency, field, value);
     },
-    saveFileToClient(filename, contentType) {
-      let content = convertToLuaTxt(this.settings, this.currency);
-      //WORK ON THIS
-      console.log("saving...");
-      const a = document.createElement("a");
-      const file = new Blob([content], { type: contentType });
-
-      a.href = URL.createObjectURL(file);
-      a.download = filename;
-      a.click();
-
-      URL.revokeObjectURL(a.href);
-    },
   },
+  /*   computed: {
+    settingsexcludelock(){
+      return 
+    }
+  } */
 };
 </script>
 

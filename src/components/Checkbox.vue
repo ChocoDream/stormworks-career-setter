@@ -6,7 +6,10 @@
 
 <script>
 export default {
-  props: ["name", "bool"],
+  props: {
+    name: String,
+    bool: Boolean
+  },
   data() {
     return {
       checkboxBool: this.bool,

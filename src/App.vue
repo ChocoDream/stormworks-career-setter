@@ -21,4 +21,11 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+:root{
+  --function:#55d4d2;
+  --boolean: #b6307b;
+  --number:#9e754f;
+  --string:#5be874;
+  --comment: #636260;
+};
 </style>

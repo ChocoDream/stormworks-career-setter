@@ -1,17 +1,20 @@
 <template>
   <md-field>
-    <label> {{name}} </label>
+    <label> {{ name }} </label>
     <md-input v-model="inputValue" @change="sendToParent"></md-input>
   </md-field>
 </template>
 
 <script>
 export default {
-  props:["name", "value"],
-  data(){
-    return{
+  props: {
+    name: String,
+    value: Number,
+  },
+  data() {
+    return {
       inputValue: this.value,
-    }
+    };
   },
   methods: {
     sendToParent() {
@@ -21,9 +24,8 @@ export default {
       });
     },
   },
-}
+};
 </script>
 
 <style>
-
 </style>
